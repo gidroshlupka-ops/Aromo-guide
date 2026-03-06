@@ -775,81 +775,68 @@ const Delivery = () => {
 const Contacts = () => {
   return (
     <section id="contacts" className="py-16">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="font-serif text-4xl md:text-5xl text-stone-800 text-center mb-16">Контакты</h2>
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="font-serif text-4xl md:text-5xl text-stone-800 text-center mb-16">Контакты</h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-8">
+            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left p-6 glass-card rounded-2xl">
+              <div className="p-4 bg-emerald-100 text-emerald-600 rounded-xl scale-110"><Phone size={28} /></div>
+              <div>
+                <p className="text-sm text-stone-400 uppercase tracking-widest font-black mb-1">WhatsApp / Телефон</p>
+                <a href="tel:+79936999339" className="text-xl md:text-2xl font-black text-stone-800 hover:text-emerald-600 transition-colors" onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'call_main')}>+7 (993) 699-93-39</a>
+              </div>
+            </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-      <div className="space-y-8">
-        {/* WhatsApp / Телефон */}
-        <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left p-6 glass-card rounded-2xl">
-          <div className="p-4 bg-emerald-100 text-emerald-600 rounded-xl scale-110"><Phone size={28} /></div>
-          <div>
-            <p className="text-sm text-stone-400 uppercase tracking-widest font-black mb-1">WhatsApp / Телефон</p>
-            <a 
-              href="tel:+79936999339" 
-              onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'call_main')}
-              className="text-xl md:text-2xl font-black text-stone-800 hover:text-emerald-600 transition-colors"
-            >
-              +7 (993) 699-93-39
-            </a>
+            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left p-6 glass-card rounded-2xl">
+              <div className="p-4 bg-blue-100 text-blue-600 rounded-xl scale-110"><Send size={28} /></div>
+              <div className="flex flex-col items-center md:items-start">
+                <p className="text-sm text-stone-400 uppercase tracking-widest font-black mb-3" onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_personal')}>Telegram Личный</p>
+                <a href="https://t.me/Naum_SW" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-blue-50 text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-full transition-colors font-black text-lg">
+                  <span>@Naum_SW</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left p-6 glass-card rounded-2xl">
+              <div className="p-4 bg-stone-100 text-stone-600 rounded-xl scale-110"><MessageCircle size={28} /></div>
+              <div>
+                <p className="text-sm text-stone-400 uppercase tracking-widest font-black mb-1">Контакт в Max</p>
+                <a href="tel:+79227485998" className="text-xl md:text-2xl font-black text-stone-800 hover:text-stone-600 transition-colors">+7 (922) 748-59-98</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Telegram Личный */}
-        <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left p-6 glass-card rounded-2xl">
-          <div className="p-4 bg-blue-100 text-blue-600 rounded-xl scale-110"><Send size={28} /></div>
-          <div className="flex flex-col items-center md:items-start">
-            <p className="text-sm text-stone-400 uppercase tracking-widest font-black mb-3">Telegram Личный</p>
-            <a 
-              href="https://t.me/Naum_SW" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_personal')}
-              className="inline-flex items-center gap-3 bg-blue-50 text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-full transition-colors font-black text-lg"
-            >
-              <span>@Naum_SW</span>
-            </a>
+          <div className="space-y-8">
+            <div className="p-8 glass-card rounded-3xl border-amber-100">
+              <h4 className="font-black text-xl text-stone-800 mb-6 flex flex-col lg:flex-row items-center gap-3 justify-center lg:justify-start text-center lg:text-left">
+                <Send className="text-blue-500" size={24} />
+                Наши ресурсы в Telegram
+              </h4>
+              <ul className="space-y-6 text-base md:text-lg text-stone-600 text-center lg:text-left font-medium">
+                <li>
+                  <p className="font-bold mb-2 text-stone-800">Бот-каталог с полным описанием ароматов</p>
+                  <a href="https://aromo.pro/NNN14_88" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all font-bold" onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_bot')}>aromo.pro/NNN14_88</a>
+                </li>
+                <li>
+                  <p className="font-bold mb-2 text-stone-800">Наш чат: отвечаем на ваши вопросы и рассказываем об интересном</p>
+                  <a href="https://aromo.pro/chat/NNN14_88" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all font-bold" onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_chat')}>aromo.pro/chat/NNN14_88</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 glass-card rounded-3xl text-center lg:text-left">
+              <p className="text-sm text-stone-400 uppercase tracking-widest mb-3 font-black">Сотрудничество</p>
+              <p className="text-base md:text-lg text-stone-600 mb-6 font-medium">По вопросам сотрудничества обращайтесь в Telegram</p>
+              <a href="https://t.me/Naum_SW" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-blue-50 text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-full transition-colors font-black text-lg" onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_partner')}>
+                <Send size={20} />
+                <span>@Naum_SW</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="space-y-8">
-        <div className="p-8 glass-card rounded-3xl border-amber-100">
-          <h4 className="font-black text-xl text-stone-800 mb-6 flex flex-col lg:flex-row items-center gap-3 justify-center lg:justify-start text-center lg:text-left">
-            <Send className="text-blue-500" size={24} />
-            Наши ресурсы в Telegram
-          </h4>
-          <ul className="space-y-6 text-base md:text-lg text-stone-600 text-center lg:text-left font-medium">
-            <li>
-              <p className="font-bold mb-2 text-stone-800">Бот-каталог</p>
-              <a 
-                href="https://aromo.pro/NNN14_88" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_bot')}
-                className="text-blue-600 hover:underline break-all font-bold"
-              >
-                aromo.pro/NNN14_88
-              </a>
-            </li>
-            <li>
-              <p className="font-bold mb-2 text-stone-800">Наш чат</p>
-              <a 
-                href="https://aromo.pro/chat/NNN14_88" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                onClick={() => typeof ym !== 'undefined' && ym(107014178, 'reachGoal', 'tg_chat')}
-                className="text-blue-600 hover:underline break-all font-bold"
-              >
-                aromo.pro/chat/NNN14_88
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
   );
 };
 
